@@ -1,0 +1,56 @@
+<style>
+.container {
+    display: grid;
+    grid-gap: 5px;    
+    background-color: aqua;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 400px 100px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .container {
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+.header {
+    grid-area: h;
+    background-color:midnightblue;
+}
+.menu {
+    grid-area: m;
+    background-color:rgb(53, 28, 209);
+}
+.content {
+    grid-area: c;
+    background-color:darkslateblue;
+}
+.footer {
+   grid-area: f;
+   background-color:rgb(19, 57, 95);
+}
+
+</style>
+
+
+<div class="container">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+  </div>
